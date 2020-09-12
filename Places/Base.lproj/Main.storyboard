@@ -189,7 +189,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="75" id="gXd-uZ-Qd9">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="75" id="gXd-uZ-Qd9">
                                         <rect key="frame" x="0.0" y="428" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gXd-uZ-Qd9" id="d6d-Ge-ZKn">
@@ -235,11 +235,22 @@
                     <navigationItem key="navigationItem" title="New place" id="ZmQ-Ck-L64">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="wbK-PR-PNk">
                             <connections>
-                                <segue destination="8GV-CV-wze" kind="unwind" unwindAction="cancelAction:" id="u3j-e2-ee9"/>
+                                <action selector="cancelAction:" destination="KI4-yq-sZ1" id="Tog-la-DS9"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="woP-ba-fRm"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="woP-ba-fRm">
+                            <connections>
+                                <segue destination="8GV-CV-wze" kind="unwind" unwindAction="unwindSegue:" id="7KX-YR-Vt0"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="placeImage" destination="0hi-lh-CNe" id="Hdt-QB-KlN"/>
+                        <outlet property="placeLocation" destination="sqr-tc-GLc" id="DsW-ch-2Bk"/>
+                        <outlet property="placeName" destination="wHt-9f-qu2" id="mIn-Ti-NSr"/>
+                        <outlet property="placeType" destination="Zkn-fo-JF5" id="zV0-6Y-msp"/>
+                        <outlet property="saveButton" destination="woP-ba-fRm" id="agi-Xd-bmh"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7t-qE-y8B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="8GV-CV-wze" userLabel="Exit" sceneMemberID="exit"/>
