@@ -61,6 +61,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSCameraUsageDescription</key>
-	<string>$(PRODUCT_NAME) photo use</string>
+	<string>$(PRODUCT_NAME) Tap &quot;Yes&quot; for using camera</string>
 </dict>
 </plist>
